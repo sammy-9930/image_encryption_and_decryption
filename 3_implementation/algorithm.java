@@ -27,7 +27,7 @@ public class ImageCrypto extends javax.swing.JFrame {
             }
             FileInputStream file = new FileInputStream(file_path.getText());
             FileOutputStream outStream = new FileOutputStream("Encrypt.jpg");
-            byte k[] = "SAManthaMeNezes9".getBytes();
+            byte k[] = "ThisIsA256BitKeyForAES256".getBytes();
             SecretKeySpec key = new SecretKeySpec(k, "AES");
             Cipher enc = Cipher.getInstance("AES"); //creates instance of cipher class
             enc.init(Cipher.ENCRYPT_MODE, key); //initializing cipher  
@@ -61,7 +61,7 @@ public class ImageCrypto extends javax.swing.JFrame {
             Password.getPwd();
             FileInputStream file = new FileInputStream(file_path.getText());
             FileOutputStream outStream = new FileOutputStream("Decrypt.jpg");
-            byte k[] = "SAManthaMeNezes9".getBytes();
+            byte k[] = "ThisIsA256BitKeyForAES256".getBytes();
             SecretKeySpec key = new SecretKeySpec(k, "AES");
             Cipher enc = Cipher.getInstance("AES");
             enc.init(Cipher.DECRYPT_MODE, key);
